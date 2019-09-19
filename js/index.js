@@ -58,7 +58,7 @@ function onDiscoverDevice(device){
 	if(device.name == "FitApp"){
 		
 		var listItem = document.createElement('li'),
-		html = device.name+ "," + device.id;
+		html = device.name;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
 	}
@@ -84,7 +84,7 @@ function onError(reason)  {
 
 
 function test(){
-	var url='https://placering.000webhostapp.com';	
+	var url='https://www.youtube.com/watch?v=7bPswyEkHnw';	
 	openBrowser(url);
 }
 
