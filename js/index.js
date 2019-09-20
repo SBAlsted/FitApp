@@ -55,13 +55,13 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	//if(device.name == "FitApp"){
+	if(device.name == "FitApp"){
 		
 		var listItem = document.createElement('li'),
 		html = device.name;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
-	//}
+	}
 }
 
 
@@ -85,8 +85,8 @@ function onError(reason)  {
 
 function test(){ 
 	//window.location.href = "page.html";
-	//var url='https://www.youtube.com/watch?v=7bPswyEkHnw';
-	var window.location.href = "page.html";	
+	var url='https://www.youtube.com/watch?v=7bPswyEkHnw';
+	//var window.location.href = "page.html";	
 	openBrowser(url);
 
 }
