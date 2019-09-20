@@ -85,8 +85,8 @@ function onError(reason)  {
 
 function test(){ 
 	//window.location.href = "page.html";
-	var url='https://www.youtube.com/watch?v=7bPswyEkHnw';
-	//var window.location.href = "page.html";	
+	//var url='https://www.youtube.com/watch?v=7bPswyEkHnw';
+	var url="page.html".href;	
 	openBrowser(url);
 
 }
