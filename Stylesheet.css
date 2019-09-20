@@ -49,7 +49,7 @@ body {
   width: 29px;
   height: 19px;
   border: none;
-  font: normal 77px/1 "Courier New", Courier, monospace;
+  font: normal 16px/1 "Courier New", Courier, monospace;
   color: black;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
