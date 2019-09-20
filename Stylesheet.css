@@ -41,20 +41,6 @@ body {
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
-<<<<<<< HEAD
+
 }
-.enjoy-css {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 29px;
-  height: 19px;
-  border: none;
-  font: normal 16px/1 "Courier New", Courier, monospace;
-  color: black;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 3px -2px 5px rgba(0,0,0,0.7) ;
-=======
->>>>>>> parent of 4e61dc1... skrift
-}
+
