@@ -97,3 +97,7 @@ function openBrowser(url) {
    var ref = cordova.InAppBrowser.open(url, target, options);
 }
 
+// MDB Lightbox Init
+$(function () {
+$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+});
