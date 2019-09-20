@@ -83,9 +83,11 @@ function onError(reason)  {
 
 
 
-function test(){
-	var url='https://www.youtube.com/watch?v=7bPswyEkHnw';	
+function test(){ 
+	window.location.href = "page.html";
+	//var url='https://www.youtube.com/watch?v=7bPswyEkHnw';	
 	openBrowser(url);
+
 }
 
 function openBrowser(url) {
