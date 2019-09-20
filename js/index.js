@@ -61,7 +61,7 @@ function onDiscoverDevice(device){
 		html = device.name;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
-	}
+	//}
 }
 
 
