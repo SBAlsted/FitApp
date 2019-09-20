@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+	<title></title>
+</head>
+<body>
+	<h1>
+		Vores Øvelser!<br>
+	</h1>
+	<br>
+	<img src="pullups.png" alt="Pull ups">
+	<br>
+	<img src="push-ups.png" alt="push-ups">
+
+
+</body>
+</html>
