@@ -1,5 +1,7 @@
 body {
 	background-color: white;
+  background-image: url("billeder/FitApp.jpg");
+  background-repeat: no-repeat;
 }
 
 /* Centered text */
