@@ -2,6 +2,9 @@ body {
 	background-color: white;
   background-image: url("billeder/FitApp.jpg");
   background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Centered text */
