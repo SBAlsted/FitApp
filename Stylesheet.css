@@ -30,9 +30,24 @@ font-style: normal;
 font-variant: normal;
 text-transform: none;
 }
+
+#subtitletext {
+
+font-family: Georgia, serif;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color:#000000;
+font-weight: normal;
+text-decoration: underline solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
 }
 
-/* Centered text */
+
+
 .centered {
   position: absolute;
   top: 50%;
@@ -64,13 +79,50 @@ text-transform: none;
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
-.styled:hover {
-    background-color: rgba(255, 0, 0, 1);
+.styled2 {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 20px;
+    background-color: red;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 
+}
+
+#stopwatch {
+  background: #eee;
+  border: 1px solid #999;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 250px;
+}
+#sw-time {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+#sw-rst, #sw-go {
+  width: 45%;
+  box-sizing: padding-box;
+  padding: 10px;
+  display: inline-block;
+  background: #aa2f2f;
+  border: 0;
+  color: #fff;
+  
 }
 
