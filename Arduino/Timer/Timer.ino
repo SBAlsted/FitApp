@@ -2,13 +2,9 @@
 #include <SPI.h>
 #include "Adafruit_BLE.h"
 #include "Adafruit_BluefruitLE_SPI.h"
-#include "Adafruit_BluefruitLE_UART.h"
 
 #include "BluefruitConfig.h"
 
-#if SOFTWARE_SERIAL_AVAILABLE
-#include <SoftwareSerial.h>
-#endif
 
 /*=========================================================================
        -----------------------------------------------------------------------*/
@@ -18,12 +14,8 @@
 /*=========================================================================*/
 
 
-//Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
-
 /* ...software SPI, using SCK/MOSI/MISO user-defined SPI pins and then user selected CS/IRQ/RST */
-Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_SCK, BLUEFRUIT_SPI_MISO,
-                             BLUEFRUIT_SPI_MOSI, BLUEFRUIT_SPI_CS,
-                             BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
+Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_SCK, BLUEFRUIT_SPI_MISO, BLUEFRUIT_SPI_MOSI, BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
 
 
 // A small helper
@@ -41,7 +33,10 @@ void setup() {
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);
   pinMode(ledPin3, OUTPUT);
-  pinMode(button, INPUT);
+
+  digitalWrite(ledPin1, LOW);  // turn LED OFF
+  digitalWrite(ledPin2, LOW);  // turn LED OFF
+  digitalWrite(ledPin3, LOW);  // turn LED OFF
 
   Serial.begin(115200);
   Serial.println(F("Adafruit Bluefruit Command <-> Data Mode Example"));
@@ -75,7 +70,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   
   if(! ble.isConnected()){
     digitalWrite(ledPin1, LOW);  // turn LED OFF
