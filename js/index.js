@@ -84,9 +84,6 @@ function onError(reason)  {
 
 
 function test(){ 
-	//window.location.href = "page.html";
-	//var url='https://www.youtube.com/watch?v=7bPswyEkHnw';
-	//var url="page.html";
 	window.location.href="page.html";	
 	openBrowser(url);
 
@@ -97,11 +94,4 @@ function openBrowser(url) {
    var options = "location=no"
    var ref = cordova.InAppBrowser.open(url, target, options);
 }
-
-// MDB Lightbox Init
-$(function () {
-$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-});
-
-
 
