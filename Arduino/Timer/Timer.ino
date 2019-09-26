@@ -18,7 +18,7 @@
 Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_SCK, BLUEFRUIT_SPI_MISO, BLUEFRUIT_SPI_MOSI, BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
 
 
-// A small helper
+/* A small helper */
 void error(const __FlashStringHelper*err) {
   Serial.println(err);
   while (1);
@@ -29,11 +29,13 @@ int ledPin2 = 9;
 int ledPin3 = 6;
 
 void setup() {
-  // put your setup code here, to run once:
+
+  /* Sætter LED som output */
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);
   pinMode(ledPin3, OUTPUT);
 
+  /* Sætter LED slukket som start værdi */
   digitalWrite(ledPin1, LOW);  // turn LED OFF
   digitalWrite(ledPin2, LOW);  // turn LED OFF
   digitalWrite(ledPin3, LOW);  // turn LED OFF
@@ -61,16 +63,16 @@ void setup() {
     }
   }
 
-  //Give module a new name
+  /* Give module a new name */
   ble.println("AT+GAPDEVNAME=FitApp"); // named FitApp
 
-  // Set module to DATA mode
+  /* Set module to DATA mode */
   Serial.println( F("Switching to DATA mode!") );
   ble.setMode(BLUEFRUIT_MODE_DATA);
 }
 
 void loop() {
-  
+  /* Tjekker om der er fobundet til bluetooth og starter LED i rækkefølge med delay  */
   if(! ble.isConnected()){
     digitalWrite(ledPin1, LOW);  // turn LED OFF
     digitalWrite(ledPin2, LOW);  // turn LED OFF
