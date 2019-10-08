@@ -3,6 +3,7 @@
 
 
 // ASCII only
+// "buffer" gør den til only readable
 function bytesToString(buffer) {
     return String.fromCharCode.apply(null, new Uint8Array(buffer));
 }
@@ -19,6 +20,8 @@ function stringToBytes(string) {
 
 
 //the bluefruit UART Service
+//bluefruits kommunikation med mobil
+//den identificerer at der kommunikeres med en bluefruit
 var blue ={
 	serviceUUID: '6e400001-b5a3-f393-e0a9-e50e24dcca9e',
     txCharacteristic: '6e400002-b5a3-f393-e0a9-e50e24dcca9e', // transmit is from the phone's perspective
@@ -30,7 +33,8 @@ var bleDeviceName;
 var deviceList =[];
 
 setTimeout("window.location.reload();",20000); //reload siden hvert 20. sekund. Dermed genindlæses Bluetooth-liste
- 
+
+// tilføjer en eventlistener. 
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
     bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
@@ -42,7 +46,6 @@ function onDeviceReady(){
 
 	 
 function refreshDeviceList(){
-	//deviceList =[];
 	document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
 	if (cordova.platformId === 'android') { // Android filtering is broken
 		ble.scan([], 5, onDiscoverDevice, onError);
@@ -66,7 +69,7 @@ function onDiscoverDevice(device){
 
 
 function conn(){
-	var  deviceTouch= event.srcElement.innerHTML;
+	var  deviceTouch = event.srcElement.innerHTML;
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
